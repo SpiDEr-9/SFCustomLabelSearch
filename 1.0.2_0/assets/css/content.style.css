@@ -1,0 +1,206 @@
+ 
+.SPIDY-ext-container {
+    z-index: 9000;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 50%;
+    background-color: rgb(245, 245, 245);
+    box-shadow: rgba(0, 0, 0, 0.2) -10px 3px 10px 1px;
+    border-left: 1px solid rgb(216, 221, 230);
+    border-bottom: 1px solid rgb(216, 221, 230); 
+}
+
+.SPIDY-ext-header {
+    background: dodgerblue;
+    padding: .5rem;
+    text-align: center;
+    color: white;
+    font-size: 1rem; 
+}
+
+.SPIDY-ext-searchbar {
+    padding: .6rem;
+}
+
+.SPIDY-ext-action svg {
+    cursor: pointer;
+    fill: white;
+}
+
+.SPIDY-ext-user-list {
+    max-height: 70dvh;
+    overflow: auto;
+}
+
+.SPIDY-ext-footer {
+    border-top: 1px solid rgb(201, 201, 201);
+    padding: 2px 10px 3px 10px;
+    background: #f3f3f3;
+    color: lightslategray;
+}
+
+.SPIDY-ext-container .SPIDY-ext-user-table {
+    counter-reset: serial-number;
+}
+
+.SPIDY-ext-container .SPIDY-ext-user-table tbody th:first-child:before {
+    counter-increment: serial-number;
+    content: counter(serial-number);
+}
+ 
+.SPIDY-table {
+    background-color: #ffffff;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-top: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.SPIDY-table tr>th:first-child,
+.SPIDY-table tr>td:first-child {
+    padding-left: 1.5rem;
+}
+
+.SPIDY-table th,
+.SPIDY-table td {
+    font-weight: 400;
+    white-space: nowrap;
+    position: relative;
+    padding: 0.25rem 0.5rem;
+}
+
+.SPIDY-table thead th {
+    background-color: rgb(243, 243, 243);
+    color: rgb(68, 68, 68);
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+.SPIDY-table tbody td,
+.SPIDY-table tbody th {
+    border-top: 1px solid rgb(229, 229, 229);
+}
+
+.SPIDY-table tbody tr:hover>th,
+.SPIDY-table tbody tr:hover>td {
+    background-color: rgb(243, 243, 243);
+} 
+
+.SPIDY-row {
+    display: flex;
+}
+
+.SPIDY_vertical-align-center {
+    align-items: center;
+    align-content: center;
+}
+
+.SPIDY_align-spread,
+.SPIDY--align-spread {
+    justify-content: space-between;
+}
+
+.SPIDY_align-spread .SPIDY-col {
+    flex-grow: 0;
+}
+
+.SPIDY-col {
+    flex: 1 1 auto;
+}
+
+.SPIDY-small-icon {
+    width: 1rem !important;
+    height: 1rem !important;
+    line-height: 1rem !important;
+}
+ 
+.SPIDY-classic {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.SPIDY-classic p{
+    margin: 0px;
+}
+
+.SPIDY-classic a {
+    color: rgb(1, 118, 211);
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.SPIDY-classic a:hover,
+.SPIDY-classic a:focus {
+    text-decoration: underline;
+    color: rgb(1, 68, 134);
+}
+.SPIDY-classic .SPIDY-ext-user-table, 
+.SPIDY-classic .SPIDY-ext-footer{
+    font-size: 13px; 
+}
+ 
+.SPIDY-classic .slds-input{
+    display: block;
+    width: 98%; 
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    min-height: calc(1.5em +(.5rem + 2px));
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: .2rem;
+}
+.SPIDY-classic .slds-input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(13, 110, 253, .25);
+}
+
+
+/* spin */
+.cover-spin {
+    position: absolute;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    display: none; 
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+.cover-spin::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:48%;
+    width:40px;height:40px;
+    border-style:solid;
+    border-color:dodgerblue;
+    border-top-color:transparent;
+    border-width: 4px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}

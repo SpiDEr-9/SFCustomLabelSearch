@@ -1,0 +1,29 @@
+{
+   "action": {
+   },
+   "author": "bhush50@gmail.com",
+   "background": {
+      "service_worker": "background.service.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "assets/css/content.style.css" ],
+      "js": [ "assets/js/jquery.min.js", "content.script.js" ],
+      "matches": [ "https://*.salesforce.com/*", "https://*.visual.force.com/*", "https://*.vf.force.com/*", "https://*.lightning.force.com/*", "https://*.cloudforce.com/*", "https://*.visualforce.com/*", "https://*.sfcrmapps.cn/*", "https://*.sfcrmproducts.cn/*", "https://*.salesforce.mil/*", "https://*.visual.force.mil/*", "https://*.vf.force.mil/*", "https://*.lightning.force.mil/*", "https://*.cloudforce.mil/*", "https://*.visualforce.mil/*", "https://*.crmforce.mil/*" ]
+   } ],
+   "description": "Quick Login as admin: Simplifying Troubleshooting and Resolution and Empowering Administrators!",
+   "host_permissions": [ "https://*.salesforce.com/*", "https://*.force.com/*", "https://*.cloudforce.com/*" ],
+   "icons": {
+
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn+gFaHFkFso4NSRbV23l8AI+30ddHQ15j/5ccAeOWy5Shzn70ezwtC6FJrB6H/+DUX0yGhZcs6FgnF2jngL921wD5rjCUYX6a8VpimAlpHaA/MHIdV8vn4yVl3EEowc7d0B2iXJdPH1BaRNVWKdFDKhNL5vdPXO7OHNhNlblmBnsy0F1YNjC7RoKwHxvPGQZQkR7cH7JFw2P9lURSOkSJokWg1a+xRYcqp844masamyPzENMyS7KdVWhAXdhNdIqDKTosfKau8IXoMIMAxSZ1vdk20iUg8DfQBHQ3BptRmkDxEm1y7lHziLxl5+AqV/EQYbQMAsSvJNhHZwhr1wtaQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "88",
+   "name": "aa hushan Label ",
+   "permissions": [ "cookies", "storage", "declarativeContent" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2",
+   "version_name": "1.0.2"
+}

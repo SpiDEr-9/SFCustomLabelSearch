@@ -12,7 +12,8 @@
 }
 
 .SPIDY-ext-header {
-    background: dodgerblue;
+    background: #5b5454;
+    font-family: cursive;
     padding: .5rem;
     text-align: center;
     color: white;
@@ -29,7 +30,7 @@
 }
 
 .SPIDY-ext-user-list {
-    max-height: 70dvh;
+    max-height: 40dvh;
     overflow: auto;
 }
 
@@ -113,6 +114,11 @@
     flex: 1 1 auto;
 }
 
+.spidyNameBottom{
+    font-weight: 700;
+    font-family: cursive;
+}
+
 .SPIDY-small-icon {
     width: 1rem !important;
     height: 1rem !important;
@@ -128,6 +134,8 @@
 }
 
 .SPIDY-classic a {
+    font-weight: 600;
+    font-family: cursive;
     color: rgb(1, 118, 211);
     text-decoration: none;
     transition: color .1s linear;

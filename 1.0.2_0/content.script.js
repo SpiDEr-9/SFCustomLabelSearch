@@ -72,17 +72,17 @@ $(document).ready(function () {
        
     <div class="SPIDY-ext-header">
             <div class="SPIDY-row SPIDY_vertical-align-center SPIDY_align-spread">
-                <div class="SPIDY-col">
-                 
-                </div>
+               
+                 <div class="SPIDY-col" title="Refresh Users" >
+                        <svg id="SPIDY-ext-refresh" class="slds-icon SPIDY-small-icon" aria-hidden="true"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#refresh"></use></svg>
+                    </div>
+
                 <div class="SPIDY-col">
                     <p>Salesforce Custom Labels</p>
                 </div>
                 <div class="SPIDY-col SPIDY-ext-action">
                 <div class="SPIDY-row SPIDY_vertical-align-center">
-                    <div class="SPIDY-col" title="Refresh Users" >
-                        <svg id="SPIDY-ext-refresh" class="slds-icon SPIDY-small-icon" aria-hidden="true"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#refresh"></use></svg>
-                    </div>
+                    
                     <div class="SPIDY-col" title="Close">
                         <svg id="SPIDY-ext-close" class="slds-icon SPIDY-small-icon" aria-hidden="true" style="margin: 0px 6px;">
                             <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#close"></use>
@@ -100,7 +100,7 @@ $(document).ready(function () {
                     <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#search"></use>
                 </svg>` : ''}
                
-                    <input type="text" id="SPIDY-search-input"  placeholder="Search all columns..." class="slds-input" />
+                    <input type="text" id="SPIDY-search-input"  placeholder="Search label Name or Value..." class="slds-input" />
                 </div>
             </div>
 
@@ -122,11 +122,8 @@ $(document).ready(function () {
         <!--User Table : End-->
         <div class="SPIDY-ext-footer">
             <div class="SPIDY-row SPIDY_align-spread">
-                <div class="SPIDY-col">
-                Last Refreshed: ${new Intl.DateTimeFormat('en-US', {
-            dateStyle: 'long',
-            timeStyle: 'short',
-        }).format(new Date(timestamp))} ● Total Labels: ${customLables.length} ● Created By SpiDEr
+                <div class="SPIDY-col spidyNameBottom">
+● Created By SpiDEr <img width="28px" height="28px" src="https://img.icons8.com/color/32/linkedin.png" alt="linkedin"/> <a href="https://www.linkedin.com/in/bdmhatre" target="_blank">Bhushan Dilip Mhatre</a>
                 </div>
                 <div class="SPIDY-col">
                     v1.0.0

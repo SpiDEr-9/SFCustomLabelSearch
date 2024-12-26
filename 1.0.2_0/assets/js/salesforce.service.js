@@ -1,21 +1,28 @@
 /*  Created by nisarahmad.ajmer@gmail.com */
 var SalesforceService = (function () {
+console.log('inside SalesforceService  1');
 
-    var _sessionId, _instanceName, _apiVersion;
+var _sessionId, _instanceName, _apiVersion;
 
-    function SalesforceApi(sessionId, instanceName, apiVersion) {
-        _sessionId = sessionId;
-        _instanceName = instanceName;
-        _apiVersion = apiVersion;
-    }
+function SalesforceApi(sessionId, instanceName, apiVersion) {
+    console.log('SalesforceApi---'+ sessionId+'   2- '+instanceName+'  3- '+apiVersion);
+    
+    _sessionId = sessionId;
+    _instanceName = instanceName;
+    _apiVersion = apiVersion;
+}
 
-    SalesforceApi.prototype.callout = function (url, method = 'GET', body = '') {
-         
-        let endpoint = `https://${_instanceName}${url}`;
+SalesforceApi.prototype.callout = function (url, method = 'GET', body = '') {
+    console.log('inside SalesforceService  2');
+    
+    let endpoint = `https://${_instanceName}${url}`;
+    
+    console.log('inside SalesforceService  3'+ endpoint);
 
         return new Promise((resolve, reject) => {
             if (method === 'POST') {
-
+                console.log('post body---'+ JSON.stringify(body));
+                
                 fetch(endpoint, {
                     method: 'POST',
                     headers: {
@@ -25,6 +32,7 @@ var SalesforceService = (function () {
                     body: JSON.stringify(body),
                 }).then(response => response.json())
                     .then(json => {
+                        console.log('post resp---'+ JSON.stringify(json));
                         resolve(json);
                     })
                     .catch(err => {
@@ -32,6 +40,7 @@ var SalesforceService = (function () {
                         reject(err);
                     });
             } else {
+                console.log('post get---'+ JSON.stringify(body));
                 fetch(endpoint, {
                     method: 'GET',
                     headers: {
@@ -40,6 +49,7 @@ var SalesforceService = (function () {
                     },
                 }).then(response => response.json())
                     .then(json => {
+                        console.log('get resp---'+ JSON.stringify(json));
                         resolve(json);
                     })
                     .catch(err => {

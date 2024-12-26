@@ -74,10 +74,14 @@ function setState(name) {
 }
 
 chrome.action.onClicked.addListener((tab) => {
+    console.log('on icon click--- : ');
     setState('Wait');
     (async () => {
         sessionCookie = await getSessionId(tab);
+        console.log('session cookie---'+ sessionCookie);
+        
         connectedApp = new SalesforceService(sessionCookie.sid, sessionCookie.domain, 60);
+        console.log('connectedApp---'+ connectedApp);
         checkUserAndStorage(false);
     })();
 });
@@ -85,9 +89,14 @@ chrome.action.onClicked.addListener((tab) => {
 function getSessionId(tab) {
     return new Promise((resolve, reject) => {
         const currentDomain = new URL(tab.url);
+        console.log('OUTPUT : currentDomain',currentDomain);
         const orderedDomains = ["salesforce.com", "cloudforce.com", "salesforce.mil", "cloudforce.mil", "sfcrmproducts.cn"];
 
         chrome.cookies.get({ url: currentDomain.origin, name: "sid" }, cookie => {
+            console.log('cookies---'+JSON.stringify(cookie));
+            console.log('cookies111---'+cookie.value.split("!"));
+            // console.log('oid---'+oid);
+            
             const [oid] = cookie.value.split("!");
             orderedDomains.forEach(currentDomain => {
                 chrome.cookies.getAll({ name: "sid", domain: currentDomain.hostname, secure: true }, cookies => {

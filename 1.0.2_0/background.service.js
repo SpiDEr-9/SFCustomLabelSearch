@@ -1,4 +1,3 @@
-/* createdBy: nisarahmad.ajmer@gmail.com */
 
 "use strict";
 import { SalesforceService } from "/assets/js/salesforce.service.js";

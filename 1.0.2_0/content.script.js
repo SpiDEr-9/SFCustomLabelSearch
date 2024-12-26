@@ -1,5 +1,3 @@
-/* createdBy: nisarahmad.ajmer@gmail.com */
-
 "use strict";
 
 const LIGHTNING_ELEMENT = '#auraLoadingBox';

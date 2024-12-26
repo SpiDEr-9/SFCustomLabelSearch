@@ -1,4 +1,3 @@
-/*  Created by nisarahmad.ajmer@gmail.com */
 var SalesforceService = (function () {
 console.log('inside SalesforceService  1');
 

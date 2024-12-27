@@ -12,7 +12,7 @@
       "js": [ "assets/js/jquery.min.js", "content.script.js" ],
       "matches": [ "https://*.salesforce.com/*", "https://*.visual.force.com/*", "https://*.vf.force.com/*", "https://*.lightning.force.com/*", "https://*.cloudforce.com/*", "https://*.visualforce.com/*", "https://*.sfcrmapps.cn/*", "https://*.sfcrmproducts.cn/*", "https://*.salesforce.mil/*", "https://*.visual.force.mil/*", "https://*.vf.force.mil/*", "https://*.lightning.force.mil/*", "https://*.cloudforce.mil/*", "https://*.visualforce.mil/*", "https://*.crmforce.mil/*" ]
    } ],
-   "description": "Quick Login as admin: Simplifying Troubleshooting and Resolution and Empowering Administrators!",
+   "description": "To get salesforce custom labels and their value and find quickly using search!",
    "host_permissions": [ "https://*.salesforce.com/*", "https://*.force.com/*", "https://*.cloudforce.com/*" ],
    "icons": {
     "16": "icon16.png",
@@ -20,13 +20,13 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  
+   "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmPU00lYZWQnWocIX6Cnu3+7DfrWoc/Y6c77Cfk102+du3eg4FBXLzK1A5h3PVO+PHe6XzkRZXO1qwY0SFBxamzdEJCOROF+Xb2bPyjPc5Kj9MMpjwLLrQwW0fBpYUWXM6yMQ8b7ZvNaPGNVUdsStELQ0cmhz7usBX0I+DxbEqP2YcAFvU2v4H8Jb30UTSP/xz/wVOKNOSOd+JPPHO6jYddX+xmcoiTXbeFxAHNJiCnK+27Ka4BIPJZZp4KYU/cBW+SGMYfGqEuYKtpN9djkMxuGknbXH3x8mZy7VgZkR1gXKr8dqyZdc4Q5/VVi2OtlqeRlC2oftsS4Bwpio2ricdQIDAQAB",
    "incognito": "split",
    "manifest_version": 3,
    "minimum_chrome_version": "88",
-   "name": "aa hushan Label ",
+   "name": "SF Custom Label Finder ",
    "permissions": [ "cookies", "storage", "declarativeContent" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.0.2",
-   "version_name": "1.0.2"
+   "version": "1.0.0",
+   "version_name": "1.0.0"
 }
